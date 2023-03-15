@@ -22,7 +22,6 @@ public class Deck : MonoBehaviour
 
     //      string[] deck = {clover1, club1, d1, heart1};
 
-    // Start is called before the first frame update
     void Start()
     {
         for (int type = 0; type < 4; type++) {
@@ -32,7 +31,6 @@ public class Deck : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
