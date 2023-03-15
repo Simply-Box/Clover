@@ -20,19 +20,12 @@ public class Deck : MonoBehaviour
 {
     public List<Card> Cards = new List<Card>();
 
-    //      string[] deck = {clover1, club1, d1, heart1};
-
-    void Start()
+    void Awake()
     {
         for (int type = 0; type < 4; type++) {
             for (int value = 1; value <= 13; value++) {
-                Cards.Add(new Card((CardType)type, value));
+            Cards.Add(new Card((CardType)type, value));
             }
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

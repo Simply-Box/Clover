@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //      new List<Cards>(), Generic type parameters
-
     public List<Card> Hand = new List<Card>();
 
-    // Start is called before the first frame update
     void Start()
     {
         Deck deck = FindObjectOfType<Deck>();
@@ -16,6 +13,7 @@ public class Player : MonoBehaviour
 
         for (int i = 0; i < handSize; i++) {
             int randomCardIndex = Random.Range(0, deck.Cards.Count);
+            
             Hand.Add(deck.Cards[randomCardIndex]);
             deck.Cards.RemoveAt(randomCardIndex);
         }
@@ -25,7 +23,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
     }
